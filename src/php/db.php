@@ -1,10 +1,17 @@
 <?php
 
 function Createdb(){
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "bookstore";
+    // local 
+    // $servername = "localhost";
+    // $username = "root";
+    // $password = "";
+    // $dbname = "bookstore";
+
+    // heroku
+    $servername = "us-cdbr-east-03.cleardb.com";
+    $username = "ba62ffb01ea84f";
+    $password = "93d51e2d";
+    $dbname = "heroku_0e33b230f8548fc";
 
     // create connection
     $con = mysqli_connect($servername, $username, $password);
