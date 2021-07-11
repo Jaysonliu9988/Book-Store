@@ -17,6 +17,10 @@ function createData(){
     $bookpublisher = textboxValue("book_publisher");
     $bookprice = textboxValue("book_price");
 
+    if (strip_tags($bookname) != $bookname) {
+        $bookname = htmlentities($bookname);
+    }
+
     if($bookname && $bookpublisher && $bookprice){
 
         $sql = "INSERT INTO books (book_name, book_publisher, book_price) 
