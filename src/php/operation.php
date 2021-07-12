@@ -18,7 +18,7 @@ function createData(){
     $bookprice = textboxValue("book_price");
 
     if (strip_tags($bookname) != $bookname) {
-        $bookname = htmlentities($bookname);
+        $bookname = htmlspecialchars($bookname);
     }
 
     if($bookname && $bookpublisher && $bookprice){
